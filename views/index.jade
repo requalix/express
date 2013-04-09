@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  div Use up and down arrow keys to jump and dive. Escape is pause. If you hit
+    | a red box, you will die and the game will restart.
+    #scorebox Personal Best: 
+      span(id="personalBest") 0
+      |  | Score: 
+      span(id='score') 0
+  audio(controls)
+    source(src='/music.ogg')
+    source(src='/music.mp3')
+    source(src='/music.wav')
+  canvas(id='game', width='1024', height='512')
+  script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+  script(src='/javascripts/sgl.js')
+  script(src='/javascripts/game.js')
