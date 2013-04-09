@@ -10,5 +10,5 @@ rm express.zip
 ln -s . express
 zip express.zip express/index.html $(find express/public | grep -v wav)
 
-#rm index.html
-#rm express
+rm index.html
+rm express
